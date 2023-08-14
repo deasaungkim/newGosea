@@ -1,0 +1,19 @@
+/*모바일 너비 768px 이하*/
+@media screen and (max-width: 768px) {
+  .MainLayout {
+    background-color: red;
+  }
+}
+
+/*태블릿 너비 1239px 이하*/
+@media screen and (max-width: 1239px) {
+  .MainLayout {
+    background-color: blue;
+  }
+}
+/*pc 너비 1240px 이상*/
+@media screen and (min-width: 1240px) {
+  .MainLayout {
+    background-color: greenyellow;
+  }
+}
