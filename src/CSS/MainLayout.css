@@ -24,8 +24,12 @@
   }
 }
 /*pc 너비 1560px 이상(햄버거)*/
-@media screen and (max-width: 1560px) {
-  .hamburger {
+@media screen and (min-width: 1560px) {
+  .hamburger-container {
+    display: none;
+  }
+  .hamburger-container img {
+    display: none;
   }
   .menu-container {
   }
@@ -52,6 +56,14 @@
 
 .menu-container a {
   margin: 3rem;
+}
+
+.hamburger-container {
+  display: block;
+}
+.hamburger-container img {
+  width: 3rem;
+  margin: 1rem 5rem 0 0;
 }
 
 /*MainFooter*/

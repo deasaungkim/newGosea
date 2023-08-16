@@ -18,7 +18,7 @@ export const MainHeader: React.FC = () => {
         <Link to="/Faq">FAQ</Link>
         <Link to="/SignIn">로그인</Link>
       </div>
-      <div className="hamburger">
+      <div className="hamburger-container">
         <img src={hamburger} />
       </div>
     </div>
