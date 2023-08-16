@@ -4,6 +4,32 @@ import { Link } from "react-router-dom";
 import hamburger from "../../../../media/free-icon-hamburger-5135168.png";
 
 export const MainHeader: React.FC = () => {
+  const isLogin: boolean = true;
+  interface MenuObject {
+    key: number;
+    title: string;
+  }
+
+  const baseMenu: MenuObject[] = [
+    { key: 1, title: "회사소개" },
+    { key: 2, title: "정비상담" },
+    { key: 3, title: "출장정비" },
+    { key: 4, title: "고씨몰" },
+    { key: 5, title: "커뮤니티" },
+    { key: 6, title: "FAQ" },
+    { key: 7, title: "로그인" },
+  ];
+
+  const loginMenu: MenuObject[] = [
+    { key: 1, title: "회사소개" },
+    { key: 2, title: "정비상담" },
+    { key: 3, title: "출장정비" },
+    { key: 4, title: "고씨몰" },
+    { key: 5, title: "커뮤니티" },
+    { key: 6, title: "FAQ" },
+    { key: 7, title: "마이페이지" },
+  ];
+
   return (
     <div className="header">
       <div>
