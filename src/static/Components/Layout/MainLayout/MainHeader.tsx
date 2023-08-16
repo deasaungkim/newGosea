@@ -1,6 +1,7 @@
 import HomeRogo from "../../../../media/gosea-logo-light-blue.bbd279e7.png";
 import "../../../../CSS/MainLayout.css";
 import { Link } from "react-router-dom";
+import hamburger from "../../../../media/free-icon-hamburger-5135168.png";
 
 export const MainHeader: React.FC = () => {
   return (
@@ -16,6 +17,9 @@ export const MainHeader: React.FC = () => {
         <Link to="/Community">커뮤니티</Link>
         <Link to="/Faq">FAQ</Link>
         <Link to="/SignIn">로그인</Link>
+      </div>
+      <div className="hamburger">
+        <img src={hamburger} />
       </div>
     </div>
   );
