@@ -3,6 +3,12 @@
   .MainLayout {
     background-color: red;
   }
+  .header {
+  }
+  .header-rogo {
+    max-width: 4rem;
+    margin: 1rem;
+  }
 }
 
 /*태블릿 너비 1239px 이하*/
@@ -23,12 +29,19 @@
   display: flex;
   border-bottom: 5px solid rgb(0, 0, 0, 0.1);
   width: 100%;
-  height: 80px;
+  height: 5rem;
   margin: 0 auto;
 }
 .header-rogo {
-  width: 100px;
+  max-width: 10rem;
+  height: 4rem;
+  margin: 0.4rem 0 0 6rem;
 }
 .menu-container {
-  padding: 1.5em 0;
+  padding: 0.8em 0;
+  font-size: 1.6em;
+}
+
+.menu-container a {
+  margin: 3rem;
 }
