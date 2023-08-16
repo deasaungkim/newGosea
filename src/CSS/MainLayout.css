@@ -28,10 +28,16 @@
   .hamburger-container {
     display: none;
   }
-  .hamburger-container img {
-    display: none;
+  .menu-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 1559px) {
+  .hamburger-container {
+    display: block;
   }
   .menu-container {
+    display: none;
   }
 }
 
@@ -59,10 +65,10 @@
 }
 
 .hamburger-container {
-  display: block;
+  margin-left: auto;
 }
 .hamburger-container img {
-  width: 3rem;
+  width: 2.6rem;
   margin: 1rem 5rem 0 0;
 }
 
