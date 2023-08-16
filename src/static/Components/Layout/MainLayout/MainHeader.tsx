@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 export const MainHeader: React.FC = () => {
   return (
-    <div>
+    <div className="header">
       <div>
-        <img src={HomeRogo} className="HomeRogo" />
+        <img src={HomeRogo} className="header-rogo" />
       </div>
-      <div>
+      <div className="menu-container">
         <Link to="/Company">회사소개</Link>
         <Link to="/Maintenance">정비상담</Link>
         <Link to="/Businesstrip">출장정비</Link>

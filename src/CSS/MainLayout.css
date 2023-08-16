@@ -1,25 +1,34 @@
 /*모바일 너비 768px 이하*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 0) {
   .MainLayout {
     background-color: red;
   }
 }
 
 /*태블릿 너비 1239px 이하*/
-@media screen and (max-width: 1239px) {
+@media screen and (min-width: 400px) {
   .MainLayout {
-    background-color: blue;
+    background-color: skyblue;
   }
 }
 /*pc 너비 1240px 이상*/
 @media screen and (min-width: 1240px) {
   .MainLayout {
-    background-color: greenyellow;
+    background-color: white;
   }
 }
 
 /*MainHeader*/
-.HomeRogo {
-  width: 100px;
+.header {
+  display: flex;
+  border-bottom: 5px solid rgb(0, 0, 0, 0.1);
+  width: 100%;
   height: 80px;
+  margin: 0 auto;
+}
+.header-rogo {
+  width: 100px;
+}
+.menu-container {
+  padding: 1.5em 0;
 }
