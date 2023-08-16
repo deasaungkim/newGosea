@@ -6,7 +6,7 @@ export const MainHeader: React.FC = () => {
   return (
     <div className="header">
       <div>
-        <img src={HomeRogo} className="header-rogo" />
+        <img src={HomeRogo} className="header-logo" />
       </div>
       <div className="menu-container">
         <Link to="/Company">회사소개</Link>
