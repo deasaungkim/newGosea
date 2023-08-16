@@ -1,5 +1,5 @@
 /*모바일 너비 768px 이하*/
-@media screen and (min-width: 0) {
+@media screen and (max-width: 400px) {
   .MainLayout {
     background-color: red;
   }
@@ -12,7 +12,7 @@
 }
 
 /*태블릿 너비 1239px 이하*/
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 401px) {
   .MainLayout {
     background-color: skyblue;
   }
