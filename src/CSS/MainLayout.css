@@ -62,6 +62,8 @@
 
 .menu-container a {
   margin: 3rem;
+  color: black;
+  text-decoration-line: none;
 }
 
 .hamburger-container {
