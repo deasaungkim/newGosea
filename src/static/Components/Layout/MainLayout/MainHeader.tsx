@@ -8,26 +8,27 @@ export const MainHeader: React.FC = () => {
   interface MenuObject {
     key: number;
     title: string;
+    url: string;
   }
 
   const baseMenu: MenuObject[] = [
-    { key: 1, title: "회사소개" },
-    { key: 2, title: "정비상담" },
-    { key: 3, title: "출장정비" },
-    { key: 4, title: "고씨몰" },
-    { key: 5, title: "커뮤니티" },
-    { key: 6, title: "FAQ" },
-    { key: 7, title: "로그인" },
+    { key: 1, title: "회사소개", url: "/Company" },
+    { key: 2, title: "정비상담", url: "/Maintenance" },
+    { key: 3, title: "출장정비", url: "/Businesstrip" },
+    { key: 4, title: "고씨몰", url: "/Mall" },
+    { key: 5, title: "커뮤니티", url: "/Community" },
+    { key: 6, title: "FAQ", url: "/Faq" },
+    { key: 7, title: "로그인", url: "/SignIn" },
   ];
 
   const loginMenu: MenuObject[] = [
-    { key: 1, title: "회사소개" },
-    { key: 2, title: "정비상담" },
-    { key: 3, title: "출장정비" },
-    { key: 4, title: "고씨몰" },
-    { key: 5, title: "커뮤니티" },
-    { key: 6, title: "FAQ" },
-    { key: 7, title: "마이페이지" },
+    { key: 1, title: "회사소개", url: "/Company" },
+    { key: 2, title: "정비상담", url: "/Maintenance" },
+    { key: 3, title: "출장정비", url: "/Businesstrip" },
+    { key: 4, title: "고씨몰", url: "/Mall" },
+    { key: 5, title: "커뮤니티", url: "/Community" },
+    { key: 6, title: "FAQ", url: "/Faq" },
+    { key: 7, title: "마이페이지", url: "/Mypage" },
   ];
 
   return (
@@ -36,13 +37,19 @@ export const MainHeader: React.FC = () => {
         <img src={HomeRogo} className="header-logo" />
       </div>
       <div className="menu-container">
-        <Link to="/Company">회사소개</Link>
-        <Link to="/Maintenance">정비상담</Link>
-        <Link to="/Businesstrip">출장정비</Link>
-        <Link to="/Mall">고씨몰</Link>
-        <Link to="/Community">커뮤니티</Link>
-        <Link to="/Faq">FAQ</Link>
-        <Link to="/SignIn">로그인</Link>
+        {isLogin ? (
+          <>
+            {loginMenu.map((item) => {
+              return <Link to={item.url}>{item.title}</Link>;
+            })}
+          </>
+        ) : (
+          <>
+            {baseMenu.map((item) => {
+              return <Link to={item.url}>{item.title}</Link>;
+            })}
+          </>
+        )}
       </div>
       <div className="hamburger-container">
         <img src={hamburger} />
