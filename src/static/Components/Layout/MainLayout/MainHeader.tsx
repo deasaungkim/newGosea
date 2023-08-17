@@ -2,6 +2,7 @@ import HomeRogo from "../../../../media/gosea-logo-light-blue.bbd279e7.png";
 import "../../../../CSS/MainLayout.css";
 import { Link } from "react-router-dom";
 import hamburger from "../../../../media/free-icon-hamburger-5135168.png";
+import { Modal } from "../../Modal/Modal";
 
 export const MainHeader: React.FC = () => {
   const isLogin: boolean = true;
@@ -54,6 +55,7 @@ export const MainHeader: React.FC = () => {
       <div className="hamburger-container">
         <img src={hamburger} />
       </div>
+      <Modal />
     </div>
   );
 };
