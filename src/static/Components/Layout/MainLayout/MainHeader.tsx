@@ -3,6 +3,7 @@ import "../../../../CSS/MainLayout.css";
 import { Link } from "react-router-dom";
 import hamburger from "../../../../media/free-icon-hamburger-5135168.png";
 import { Modal } from "../../Modal/Modal";
+import React, { Children, ReactNode } from "react";
 
 export const MainHeader: React.FC = () => {
   const isLogin: boolean = true;
@@ -11,6 +12,7 @@ export const MainHeader: React.FC = () => {
     title: string;
     url: string;
   }
+  type ownProps = { children: ReactNode };
 
   const baseMenu: MenuObject[] = [
     { key: 1, title: "회사소개", url: "/Company" },
@@ -41,21 +43,29 @@ export const MainHeader: React.FC = () => {
         {isLogin ? (
           <>
             {loginMenu.map((item) => {
-              return <Link to={item.url}>{item.title}</Link>;
+              return (
+                <Link to={item.url} key={item.key}>
+                  {item.title}
+                </Link>
+              );
             })}
           </>
         ) : (
           <>
             {baseMenu.map((item) => {
-              return <Link to={item.url}>{item.title}</Link>;
+              return (
+                <Link to={item.url} key={item.key}>
+                  {item.title}
+                </Link>
+              );
             })}
           </>
         )}
       </div>
       <div className="hamburger-container">
         <img src={hamburger} />
+        <Modal />
       </div>
-      <Modal />
     </div>
   );
 };

@@ -1,5 +1,19 @@
+import React, { Children, ReactNode } from "react";
 import "./Modal.css";
 
-export const Modal = () => {
-  return <div className="ModalContrainer"></div>;
+interface MenuObject {
+  key: number;
+  title: string;
+  url: string;
+}
+export const Modal: React.FC = () => {
+  interface own {
+    children: ReactNode;
+  }
+
+  return (
+    <div className="ModalContrainer">
+      <button className="ModalButton">x</button>
+    </div>
+  );
 };
