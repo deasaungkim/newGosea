@@ -1,19 +1,109 @@
-/*모바일 너비 768px 이하*/
-@media screen and (max-width: 768px) {
+/*모바일 너비 480px 이하(세로 버전)*/
+@media screen and (max-width: 480px) {
   .MainLayout {
     background-color: red;
   }
+  .header {
+  }
+  .header-logo {
+    max-width: 4rem;
+    margin: 1rem;
+  }
 }
 
-/*태블릿 너비 1239px 이하*/
-@media screen and (max-width: 1239px) {
+/*태블릿 너비 1023px 이하*/
+@media screen and (min-width: 481px) {
   .MainLayout {
-    background-color: blue;
+    background-color: skyblue;
   }
 }
-/*pc 너비 1240px 이상*/
-@media screen and (min-width: 1240px) {
+/*pc 너비 1024px 이상*/
+@media screen and (min-width: 1024px) {
   .MainLayout {
-    background-color: greenyellow;
+    background-color: white;
   }
+}
+/*pc 너비 1560px 이상(햄버거)*/
+@media screen and (min-width: 1560px) {
+  .hamburger-container {
+    display: none;
+  }
+  .menu-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 1559px) {
+  .hamburger-container {
+    display: block;
+  }
+  .menu-container {
+    display: none;
+  }
+}
+
+/*MainHeader*/
+.header {
+  display: flex;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0/10%);
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+}
+.header-logo {
+  max-width: 10rem;
+  height: 4rem;
+  margin: 0.4rem 0 0 6rem;
+}
+.menu-container {
+  padding: 0.8em 0;
+  font-size: 1.6em;
+  margin: 0 auto;
+}
+
+.menu-container a {
+  margin: 3rem;
+  color: black;
+  text-decoration-line: none;
+}
+
+.hamburger-container {
+  margin-left: auto;
+  width: 34rem;
+  overflow: hidden;
+}
+.hamburger-img-container {
+  /* width: auto; */
+  background-color: blueviolet;
+}
+.hamburger-img {
+  width: 2.6rem;
+  margin: 1rem 5rem 0 0;
+  cursor: pointer;
+  float: right;
+}
+.modalBackground {
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+.modalLeft {
+  position: fixed;
+  transform: translateX(0);
+  transition-duration: 0.5s;
+  z-index: 2;
+}
+.modalRight {
+  position: fixed;
+  transform: translateX(34rem);
+  transition-duration: 0.5s;
+  z-index: 2;
+  top: 0;
+}
+
+/*MainFooter*/
+.footer-logo {
+  max-width: 4rem;
 }

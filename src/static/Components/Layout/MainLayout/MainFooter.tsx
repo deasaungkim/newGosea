@@ -1,4 +1,5 @@
 import LOGO from "../../../../media/gosea-logo-light-blue-gray.c417215b.png";
+import "../../../../CSS/MainLayout.css";
 import { Link } from "react-router-dom";
 
 export const MainFooter = () => {
@@ -17,8 +18,8 @@ export const MainFooter = () => {
         </div>
       </div>
       <div className="footer-copyright">
-        <div className="logo">
-          <img src={LOGO} alt="bottom-logo" />
+        <div className="">
+          <img src={LOGO} alt="bottom-logo" className="footer-logo" />
         </div>
         <div className="bread">
           <div>
