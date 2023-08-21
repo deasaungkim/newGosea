@@ -24,3 +24,18 @@
   font-size: 2rem;
   width: 10rem;
 }
+@media screen and (max-width: 480px) {
+  .ModalContrainer {
+    padding: 0;
+  }
+  .ModalMenuContainer a {
+    font-size: 1rem;
+    margin: 0 0 2rem 1.6rem;
+  }
+  .ModalButton {
+    position: relative;
+    left: 10rem;
+    font-size: 2rem;
+    float: unset;
+  }
+}
