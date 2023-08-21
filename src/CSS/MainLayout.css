@@ -68,10 +68,39 @@
 
 .hamburger-container {
   margin-left: auto;
+  width: 34rem;
+  overflow: hidden;
 }
-.hamburger-container img {
+.hamburger-img-container {
+  /* width: auto; */
+  background-color: blueviolet;
+}
+.hamburger-img {
   width: 2.6rem;
   margin: 1rem 5rem 0 0;
+  cursor: pointer;
+  float: right;
+}
+.modalBackground {
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+.modalLeft {
+  position: fixed;
+  transform: translateX(0);
+  transition-duration: 0.5s;
+  z-index: 2;
+}
+.modalRight {
+  position: fixed;
+  transform: translateX(34rem);
+  transition-duration: 0.5s;
+  z-index: 2;
+  top: 0;
 }
 
 /*MainFooter*/

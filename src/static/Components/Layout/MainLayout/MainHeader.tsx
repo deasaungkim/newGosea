@@ -3,15 +3,25 @@ import "../../../../CSS/MainLayout.css";
 import { Link } from "react-router-dom";
 import hamburger from "../../../../media/free-icon-hamburger-5135168.png";
 import { Modal } from "../../Modal/Modal";
-import React, { Children, ReactNode } from "react";
+import React, { Children, ReactNode, useState, useRef, useEffect } from "react";
+import { MenuObject } from "../../../../modules/modal";
 
 export const MainHeader: React.FC = () => {
   const isLogin: boolean = true;
-  interface MenuObject {
-    key: number;
-    title: string;
-    url: string;
-  }
+  const [modal, setModal] = useState(false);
+  const [img, setImg] = useState(true);
+  const translate = useRef<HTMLDivElement>(null);
+
+  const toggle = () => {
+    setModal(!modal);
+    setImg(!img);
+    console.log("ref:", translate);
+    // translate.current.style.visibility = visible
+  };
+
+  // const translate =React.useRef() as React.MutableRefObject<HTMLDivElement>
+  // const translate = React.useRef<HTMLDivElement>();
+
   type ownProps = { children: ReactNode };
 
   const baseMenu: MenuObject[] = [
@@ -23,7 +33,10 @@ export const MainHeader: React.FC = () => {
     { key: 6, title: "FAQ", url: "/Faq" },
     { key: 7, title: "로그인", url: "/SignIn" },
   ];
-
+  const a = () => {
+    // scroll touchmove mousewheel
+    window.scroll();
+  };
   const loginMenu: MenuObject[] = [
     { key: 1, title: "회사소개", url: "/Company" },
     { key: 2, title: "정비상담", url: "/Maintenance" },
@@ -33,6 +46,19 @@ export const MainHeader: React.FC = () => {
     { key: 6, title: "FAQ", url: "/Faq" },
     { key: 7, title: "마이페이지", url: "/Mypage" },
   ];
+  useEffect(() => {
+    if (modal === false) {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = "";
+      window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+    } else {
+      document.body.style.cssText = `
+    position: fixed; 
+    top: -${window.scrollY}px;
+    overflow-y: scroll;
+    width: 100%;`;
+    }
+  }, [modal]);
 
   return (
     <div className="header">
@@ -63,9 +89,24 @@ export const MainHeader: React.FC = () => {
         )}
       </div>
       <div className="hamburger-container">
-        <img src={hamburger} />
-        <Modal />
+        {/* <div className="hamburger-img-container"> */}
+        {img ? (
+          <img src={hamburger} className="hamburger-img" onClick={toggle} />
+        ) : (
+          <></>
+        )}
+        {/* </div> */}
+        {modal ? (
+          <div className="modalLeft" ref={translate}>
+            <Modal toggle={toggle} />
+          </div>
+        ) : (
+          <div className="modalRight">
+            <Modal toggle={toggle} />
+          </div>
+        )}
       </div>
+      {modal ? <div className="modalBackground" onClick={toggle} /> : <></>}
     </div>
   );
 };

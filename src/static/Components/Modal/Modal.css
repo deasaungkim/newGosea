@@ -1,5 +1,26 @@
 .ModalContrainer {
-  height: 100rem;
+  height: 100vh;
   width: 30rem;
-  background-color: gray;
+  padding: 2rem;
+  background-color: white;
+  /* overflow: hidden; */
+  /* transform: translateX(34rem); */
+}
+.ModalButton {
+  cursor: pointer;
+  float: right;
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  box-sizing: content-box;
+  border: none;
+  background: inherit;
+}
+.ModalMenuContainer a {
+  color: black;
+  text-decoration-line: none;
+  display: block;
+  margin: 4rem 0 0 2rem;
+  font-size: 2rem;
+  width: 10rem;
 }
