@@ -41,7 +41,7 @@ export const Modal: React.FC<ownProps> = (props) => {
           <>
             {loginMenu.map((item) => {
               return (
-                <Link to={item.url} key={item.key}>
+                <Link to={item.url} key={item.key} onClick={props.toggle}>
                   {item.title}
                 </Link>
               );
@@ -51,7 +51,7 @@ export const Modal: React.FC<ownProps> = (props) => {
           <>
             {baseMenu.map((item) => {
               return (
-                <Link to={item.url} key={item.key}>
+                <Link to={item.url} key={item.key} onClick={props.toggle}>
                   {item.title}
                 </Link>
               );
