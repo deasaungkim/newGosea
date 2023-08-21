@@ -1,4 +1,4 @@
-import HomeRogo from "../../../../media/gosea-logo-light-blue.bbd279e7.png";
+import MainRogo from "../../../../media/gosea-logo-light-blue.bbd279e7.png";
 import "../../../../CSS/MainLayout.css";
 import { Link } from "react-router-dom";
 import hamburger from "../../../../media/free-icon-hamburger-5135168.png";
@@ -63,7 +63,9 @@ export const MainHeader: React.FC = () => {
   return (
     <div className="header">
       <div>
-        <img src={HomeRogo} className="header-logo" />
+        <Link to={"/"}>
+          <img src={MainRogo} className="header-logo" />
+        </Link>
       </div>
       <div className="menu-container">
         {isLogin ? (
