@@ -108,7 +108,8 @@
     width: 14rem;
   }
   .hamburger-img {
-    margin: 1rem 2rem 0 0;
+    margin: 0.4rem 1rem 0 0;
+    width: 2rem;
   }
 }
 
