@@ -100,7 +100,8 @@
     font-size: 10px;
   }
   .header-logo {
-    width: 6rem;
+    width: 4rem;
+    height: 2.6rem;
     margin: 0.6rem 0 0 1rem;
   }
   .hamburger-container {
