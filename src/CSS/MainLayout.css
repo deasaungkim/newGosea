@@ -9,6 +9,9 @@
   .MainLayout {
     background-color: white;
   }
+  body {
+    font-size: 14px;
+  }
 }
 /*pc 너비 1560px 이상(햄버거)*/
 @media screen and (min-width: 1560px) {
@@ -165,4 +168,78 @@
     font-size: 14px;
     padding: 3rem 0 2rem 2rem;
   }
+}
+
+/*Main */
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+/*메인 h2 폰트*/
+@media screen and (min-width: 1300px) {
+  body h2 {
+    font-size: 3em;
+  }
+  body h3 {
+    font-size: 1.5em;
+  }
+}
+
+.main-container {
+  margin-top: 16vh;
+}
+.section01-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.section01-container h2 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 7.5em;
+  font-weight: 500;
+  line-height: 0.5em;
+}
+.section02-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+.section02-container h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.section03-container {
+  min-height: 50vh;
+}
+.section03-left {
+  margin-right: 200px;
+}
+.section03-left h2 {
+  font-weight: 700;
+  line-height: 0.8em;
+}
+.section03-left h3 {
+  font-weight: 500;
+  line-height: 1em;
+}
+.section03-right {
+  max-width: 30%;
+}
+
+/* 공통 CSS */
+.color-blue-01 {
+  color: #00b1ff;
+}
+.background-blou-02 {
+  background-color: #f1fafe;
+}
+.flex-row-justify-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-column-justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
