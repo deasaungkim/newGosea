@@ -212,22 +212,32 @@
   font-weight: 700;
 }
 
-.section03-container {
-  min-height: 50vh;
+.section-img-right {
+  max-width: 30%;
+  margin-left: 200px;
 }
-.section03-left {
+.section-img-left {
+  max-width: 30%;
   margin-right: 200px;
 }
-.section03-left h2 {
+.section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 50vh;
+}
+.section-container h2 {
   font-weight: 700;
   line-height: 0.8em;
 }
-.section03-left h3 {
+.section-container h3 {
   font-weight: 500;
   line-height: 1em;
 }
-.section03-right {
-  max-width: 30%;
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* 공통 CSS */
