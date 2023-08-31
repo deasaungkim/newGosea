@@ -8,6 +8,7 @@ import item01 from "../../../../media/main-item01.png";
 import item02 from "../../../../media/main-item02.png";
 import item03 from "../../../../media/main-item03.png";
 import item04 from "../../../../media/main-item04.png";
+import { Link } from "react-router-dom";
 
 export const MainPresenter = () => {
   return (
@@ -90,6 +91,12 @@ export const MainPresenter = () => {
             <p>피드백 할 수 있는 시스템 개발 및 빠른 대응을 통한 고객관리</p>
           </div>
         </div>
+      </div>
+      <div className="section07">
+        <img src={section07} />
+        <button className="section07-btn">
+          <Link to={"/"}>정비상담 신청하기</Link>
+        </button>
       </div>
     </div>
   );
