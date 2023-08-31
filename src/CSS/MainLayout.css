@@ -240,11 +240,80 @@
   justify-content: center;
 }
 
+.section06 {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section06-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section06-title h2 {
+  font-size: 5em;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4em;
+}
+
+.section06-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #e9edf4;
+}
+.section06-item div {
+  width: 260px;
+  max-width: 300px;
+  height: 260px;
+  max-height: 300px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  margin: 0 10px;
+}
+.section06-item img {
+  max-width: 120px;
+  max-height: 120px;
+  margin: 15px 0;
+}
+.section06-item h2 {
+  color: #e9edf4;
+  font-size: 2em;
+  font-weight: 700;
+}
+.section06-item p {
+  text-align: start;
+  font-size: 1em;
+}
+
+.item01-container {
+  background-color: #0092d2;
+}
+.item02-container {
+  background-color: #006a99;
+}
+.item03-container {
+  background-color: #004766;
+}
+.item04-container {
+  background-color: #002c3f;
+}
+
 /* 공통 CSS */
 .color-blue-01 {
   color: #00b1ff;
 }
-.background-blou-02 {
+.color-white-01 {
+  color: #e9edf4;
+}
+.background-blue-01 {
   background-color: #f1fafe;
 }
 .flex-row-justify-center {
