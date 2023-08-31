@@ -175,15 +175,43 @@
 }
 
 /*Main */
+/* font-family: "Black Han Sans",sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+/*   font-family: "Noto Sans KR",sans-serif  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 /*메인 h2 폰트*/
+
+/*메인 PC 레이아웃 */
 @media screen and (min-width: 1300px) {
-  body h2 {
+  .main-container h2 {
     font-size: 3em;
+    font-family: "Noto Sans KR", sans-serif;
   }
-  body h3 {
+  .main-container h3 {
     font-size: 1.5em;
+    font-family: "Noto Sans KR", sans-serif;
   }
+}
+
+/* 공통 CSS */
+.color-blue-01 {
+  color: #00b1ff;
+}
+.color-white-01 {
+  color: #e9edf4;
+}
+.background-blue-01 {
+  background-color: #f1fafe;
+}
+.flex-row-justify-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-column-justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main-container {
@@ -330,25 +358,4 @@
 .section07-btn a {
   color: #fff;
   text-decoration: none;
-}
-
-/* 공통 CSS */
-.color-blue-01 {
-  color: #00b1ff;
-}
-.color-white-01 {
-  color: #e9edf4;
-}
-.background-blue-01 {
-  background-color: #f1fafe;
-}
-.flex-row-justify-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.flex-column-justify-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }

@@ -24,7 +24,7 @@ export const MainPresenter = () => {
           </h2>
         </div>
       </div>
-      <div className="section02-container background-blou-01">
+      <div className="section02-container background-blue-01">
         <h3>고씨는</h3>
         <h3>
           <span className="color-blue-01">
